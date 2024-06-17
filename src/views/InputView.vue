@@ -8,7 +8,7 @@
           <img src="../assets/creeper_tree.png" class="creeper_tree">
         </div>
         <div id="greeting">
-          <h1>CHÀO MỪNG NGƯỜI DÙNG ẨN DANH</h1>  
+          <h2>CHÀO MỪNG NGƯỜI DÙNG ẨN DANH</h2>  
         </div>
         <div id="content_center">
           <h4>
@@ -17,8 +17,10 @@
             <i class="fa-solid fa-heart mx-2" style="color: #fe0101;"></i>
             <i class="fa-solid fa-heart" style="color: #fe0101;"></i>
           </h4>
-          <input type="text" class="form-control mb-4">
-          <button class="button-input btn mt-3 px-5 py-2">Gửi</button>
+          <input type="text" class="form-control mb-4" v-model="userName">
+          <router-link class="button-input btn mt-3 px-5 py-2" @click="checkInput" to="/graduation-card"> 
+            Gửi <i class="fa-solid fa-paper-plane"></i>
+          </router-link>
         </div>
         <div id="content_footer">
         </div>
@@ -29,12 +31,40 @@
 
 <script>
 import {ref, onMounted} from 'vue';
+import Swal from 'sweetalert2';
+import { userStore } from '../stores/store';
+import router from '../routers/router';
 
 export default {
   setup(){
+    const userName = ref('');
+    const userStoreName = userStore();
+
+    const savedName = localStorage.getItem('userName');
+    if(savedName){
+      userStoreName.setUserName(savedName);
+    }
+
+    const checkInput = () => {
+      if(userName.value === ''){
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Vui lòng nhập tên của bạn!',
+        });
+        router.push('/');
+      } else {
+        localStorage.setItem('userName', userName.value);
+        userStoreName.setUserName(userName.value);
+      }
+    }
     onMounted(() => {
       document.title = 'Welcome';
     });
+    return{
+      userName,
+      checkInput
+    }
   }
 }
 </script>
@@ -63,14 +93,14 @@ export default {
   background-color: transparent;
   margin-top: 20px;
 }
-#input_box button{
+#input_box .button-input{
   border: none;
   border-radius: 8px;
   background-color: #434634;
   color: white;
   transition: 0.25s;
 }
-#input_box button:hover{
+#input_box .button-input:hover{
   background-color: #b5bd91;
   color: #434634;
 }
