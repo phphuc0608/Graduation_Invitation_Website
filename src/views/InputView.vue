@@ -8,7 +8,7 @@
           <img src="../assets/creeper_tree.png" class="creeper_tree">
         </div>
         <div id="greeting">
-          <h2>CHÀO MỪNG NGƯỜI DÙNG ẨN DANH</h2>  
+          <h3>CHÀO MỪNG ĐẾN VỚI TRANG WEB</h3>  
         </div>
         <div id="content_center">
           <h4>
