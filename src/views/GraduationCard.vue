@@ -8,9 +8,9 @@
           <img src="../assets/border_card.png" class="border_img">
         </div>
         <div id="greeting">
-          <h6>THÂN MỜI BẠN ĐẾN THAM DỰ</h6>
-          <h3>LỄ TỐT NGHIỆP</h3>
-          <h6>CỦA MÌNH</h6>
+          <h4>THÂN MỜI BẠN </h4>
+          <h2>MAC TYSON</h2>
+          <h4>ĐẾN THAM DỰ LỄ TỐT NGHIỆP</h4>
         </div>
         <div id="content_center">
           <h3>HHH</h3>
