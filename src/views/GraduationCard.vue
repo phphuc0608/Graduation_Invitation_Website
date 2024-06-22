@@ -7,13 +7,13 @@
           <img src="../assets/graduated.png" class="header_img">
           <img src="../assets/border_card.png" class="border_img">
         </div>
-        <div id="greeting">
-          <h4>THÂN MỜI BẠN </h4>
-          <h2>MAC TYSON</h2>
-          <h4>ĐẾN THAM DỰ LỄ TỐT NGHIỆP</h4>
+        <div id="greeting" class="mb-4">
+          <h6 class="mb-4">THÂN MỜI BẠN ĐẾN THAM DỰ</h6>
+          <h2 class="mb-4" style="font-weight: 800;">LỄ TỐT NGHIỆP</h2>
+          <h4 style="font-weight: 600;">CỦA QUANG PHÚC</h4>
         </div>
         <div id="content_center">
-          <h3>HHH</h3>
+          <h3>MAC TYSON</h3>
         </div>
         <div id="content_footer">
         </div>
@@ -46,8 +46,8 @@ export default {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  width: 520px;
-  height: 742px ;
+  width: 478px;
+  height: 700px ;
 }
 .header_img{
   width: 80px;
