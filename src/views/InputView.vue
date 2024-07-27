@@ -11,12 +11,12 @@
           <h3>CHÀO MỪNG ĐẾN VỚI TRANG WEB</h3>  
         </div>
         <div id="content_center">
-          <h4>
-            Hãy nhập tên của bạn vào đây nhé 
+          <h5>
+            Hãy nhập tên của bạn vào đây nhé<br> 
             <i class="fa-solid fa-heart" style="color: #fe0101;"></i> 
             <i class="fa-solid fa-heart mx-2" style="color: #fe0101;"></i>
             <i class="fa-solid fa-heart" style="color: #fe0101;"></i>
-          </h4>
+          </h5>
           <input type="text" class="form-control mb-4" v-model="userName">
           <router-link class="button-input btn mt-3 px-5 py-2" @click="checkInput" to="/graduation-card"> 
             Gửi <i class="fa-solid fa-paper-plane"></i>
