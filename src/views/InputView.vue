@@ -115,7 +115,7 @@ export default {
 
 <style scoped>
 #background {
-  background-color: #fefff8;
+  background-color: #eed7b1;
   padding: 20px;
   height: 100vh;
 }
